@@ -11,3 +11,24 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
+
+
+source ~/.aliases
+
+# Enable [autojump](https://github.com/wting/autojump)
+[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
+
+export EDITOR=vi
+export VISUAL=vim
+
+# Use vi shortcuts in the terminal
+set -o vi
+
+# scroll through reverse-i-search
+bindkey "^R" history-incremental-search-backward
+
+# Prevent terminal sessions from sharing history when sessions are open and will append once exited.
+# More information at https://superuser.com/questions/1245273/iterm2-version-3-individual-history-per-tab
+unsetopt inc_append_history
+unsetopt share_history
+setopt append_history
