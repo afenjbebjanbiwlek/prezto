@@ -15,10 +15,7 @@ fi
 
 source ~/.aliases
 
-# Enable [autojump](https://github.com/wting/autojump)
-[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
-
-export EDITOR=vi
+export EDITOR=vim
 export VISUAL=vim
 
 # Use vi shortcuts in the terminal
